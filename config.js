@@ -81,7 +81,10 @@ const portfolioConfig = {
   ]
 };
 
-// Export for use in main.js
+// Make portfolioConfig available globally for browser use
+window.portfolioConfig = portfolioConfig;
+
+// Export for use in main.js (Node.js compatibility)
 if (typeof module !== 'undefined' && module.exports) {
   module.exports = portfolioConfig;
 }
