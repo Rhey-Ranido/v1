@@ -344,6 +344,16 @@ function populatePersonalInfoFromConfig(personal) {
     elements.developerEmail.textContent = personal.email;
     elements.developerEmail.href = `mailto:${personal.email}`;
   }
+  // About social links
+  const social = (window.portfolioConfig && window.portfolioConfig.social) || (typeof portfolioConfig !== 'undefined' ? portfolioConfig.social : null);
+  if (social) {
+    if (elements.developerGithub && social.github) {
+      elements.developerGithub.href = social.github;
+    }
+    if (elements.developerLinkedin && social.linkedin) {
+      elements.developerLinkedin.href = social.linkedin;
+    }
+  }
   if (elements.aboutBio) elements.aboutBio.textContent = personal.bio;
   if (elements.footerName) elements.footerName.textContent = personal.name;
   
@@ -616,6 +626,8 @@ function getDOMElements() {
   elements.developerTagline = document.getElementById('developer-tagline');
   elements.developerLocation = document.getElementById('developer-location');
   elements.developerEmail = document.getElementById('developer-email');
+  elements.developerGithub = document.getElementById('developer-github');
+  elements.developerLinkedin = document.getElementById('developer-linkedin');
   elements.aboutBio = document.getElementById('about-bio');
   elements.avatarInitials = document.getElementById('avatar-initials');
   elements.footerName = document.getElementById('footer-name');
