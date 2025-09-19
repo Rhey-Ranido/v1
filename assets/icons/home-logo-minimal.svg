@@ -1,0 +1,43 @@
+<svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Modern hexagonal background -->
+  <polygon points="20,2 35,11 35,29 20,38 5,29 5,11" fill="url(#hexGradient)" stroke="currentColor" stroke-width="1" opacity="0.1"/>
+  
+  <!-- Stylized RR monogram -->
+  <g transform="translate(20, 20)">
+    <!-- First R - left side -->
+    <g transform="translate(-12, -10)">
+      <path d="M0 0 L0 20 M0 0 L8 0 L8 10 L0 10 M8 10 L8 20" 
+            stroke="currentColor" 
+            stroke-width="2.5" 
+            stroke-linecap="round" 
+            stroke-linejoin="round" 
+            fill="none"/>
+    </g>
+    
+    <!-- Second R - right side with modern twist -->
+    <g transform="translate(4, -10)">
+      <path d="M0 0 L0 20 M0 0 L8 0 L8 10 L0 10 M8 10 L8 20" 
+            stroke="currentColor" 
+            stroke-width="2.5" 
+            stroke-linecap="round" 
+            stroke-linejoin="round" 
+            fill="none"
+            opacity="0.8"/>
+    </g>
+    
+    <!-- Connecting element -->
+    <circle cx="0" cy="0" r="3" fill="currentColor" opacity="0.6"/>
+    
+    <!-- Accent dots -->
+    <circle cx="-8" cy="-12" r="1" fill="currentColor" opacity="0.4"/>
+    <circle cx="8" cy="12" r="1" fill="currentColor" opacity="0.4"/>
+  </g>
+  
+  <defs>
+    <linearGradient id="hexGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#A1C2BD;stop-opacity:0.3" />
+      <stop offset="100%" style="stop-color:#708993;stop-opacity:0.1" />
+    </linearGradient>
+  </defs>
+</svg>
+

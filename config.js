@@ -1,61 +1,87 @@
-export const config = {
+// Portfolio Configuration
+// Edit this file to update your portfolio content
 
-  show: {
-    cover: false,
-    profile: false,
-    techStack: false,
+const portfolioConfig = {
+  // Personal Information
+  personal: {
+    name: "Christian Rhey Ranido",
+    title: "Aspiring Software Engineer",
+    tagline: "Building innovative solutions while pursuing excellence in Information Technology",
+    bio: "Passionate Software Engineering student at Eastern Samar State University, consistently earning Dean's List recognition while building expertise in full-stack development. I thrive on transforming complex challenges into elegant solutions and collaborating with teams to create impactful digital experiences. Currently seeking opportunities to apply my technical skills in real-world projects and contribute to innovative software solutions.",
+    email: "christianrheyranido@gmail.com",
+    phone: "+63 965 350 4545",
+    location: "Eastern Samar, Philippines",
+    avatar: "./assets/avatar.jpg", // Optional: add your photo
+    gpa: "1.50",
+    university: "Eastern Samar State University - Guiuan",
+    degree: "Bachelor of Science in Information Technology",
+    expectedGraduation: "May 2026",
+    portfolio: "rhey-ranido.github.io/v1"
   },
 
-  identity: {
-    profile: "public/profile/profile.webp",
-    cover: "public/profile/cover.webp",
-    name: "Jerson Caibog",
-    course: "BSIT",
-    school: "ESSU Guiuan",
+  // Social Links
+  social: {
+    github: "https://github.com/rhey-ranido",
+    linkedin: "https://linkedin.com/in/christianrheyranido",
+    gmail: "mailto:christianrheyranido@gmail.com"
   },
 
-  socials: {
-    github: "https://github.com/jersoncaibog",
-    linkedin: "https://www.linkedin.com/in/jerson-caibog/",
-    instagram: "https://www.instagram.com/jersondereal/"
-  },
+  // Skills
+  skills: [
+    // Languages & Programming
+    "JavaScript (ES6+)", "TypeScript", "Python", "Java", "PHP", "HTML5", "CSS3",
+    
+    // Frameworks & Libraries
+    "React", "Next.js", "Vue.js", "Node.js", "Express.js", "FastAPI", "Laravel", 
+    "Material UI", "jQuery", "Jest", "Flask", "Tailwind CSS", "Framer Motion",
+    
+    // Databases & Cloud Services
+    "Supabase", "MongoDB", "MySQL", "MariaDB", "Firebase", "PostgreSQL",
+    
+    // // Technologies & Protocols
+    // "REST APIs", "WebSockets", "Webhooks", "Microservices", "HTTP protocols"
+  ],
 
-  contacts: {
-    email: "jersoncaibog1@gmail.com",
-    phone: "0927 324 0956"
-  }, 
-
+  // Projects
   projects: [
     {
-      image: "public/projects/p1.webp",
-      title: "smart home",
-      description: "smart home system that controls devices using hand gestures",
-      techStack: [ "Next.js", "C++", "JavaScript", "Python", "TensorFlow", "PostreSQL", "Tailwind CSS" ]
+      id: 1,
+      title: "ESSU-SSC Admin System",
+      description: "Full-stack student council management system that reduced manual administrative tasks by 70%. Features role-based access control, dynamic calendar, and automated fine management with 99% data accuracy.",
+      techStack: ["React", "React Query", "Zod", "Node.js", "TypeScript", "PostgreSQL"],
+      githubUrl: "https://github.com/rhey-ranido/essu-ssc",
+      liveUrl: "https://essu-ssc.vercel.app",
+      image: "./assets/project1.jpg"
     },
     {
-      image: "public/projects/p2.webp",
-      title: "essu ssc admin",
-      description: "student management app for essu ssc",
-      techStack: [ "React", "JavaScript", "Node.js", "PostreSQL", "Tailwind CSS" ]
+      id: 2,
+      title: "Artist Hub",
+      description: "Creative platform for artists to post artworks, access tutorials, and connect through real-time messaging. Features secure authentication, artwork galleries, and interactive learning resources.",
+      techStack: ["React", "Next.js", "Supabase", "WebSockets", "Tailwind CSS", "PostgreSQL"],
+      githubUrl: "https://github.com/rhey-ranido/artist-hub",
+      liveUrl: "https://artist-hub-1.vercel.app",
+      image: "./assets/project2.png"
     },
     {
-      image: "public/projects/p3.webp",
-      title: "climate cast ph",
-      description: "forecasting app to predict temperature trends in the Philippines",
-      techStack: [ "Next.js", "Node.js", "PostreSQL", "Tailwind CSS" ]
-    },
-    {
-      image: "public/projects/p4.webp",
-      title: "wakanda",
-      description: "RFID-based attendance tracking system for a local fitness center",
-      techStack: [ "HTMl", "CSS", "JavaScript", "Node.js", "Bootstrap", "MariaDB" ]
-    },
-    {
-      image: "public/projects/p5.webp",
-      title: "smart rc car",
-      description: "remote-controlled RC car with obstacle detection",
-      techStack: [ "C++" ]
-    },
-  ]
+      id: 3,
+      title: "Service Hub",
+      description: "Marketplace platform for discovering and booking local service providers. Features map-based listings, real-time messaging, booking system, ratings/reviews, and analytics dashboard.",
+      techStack: ["Vue.js", "Node.js", "Express.js", "MongoDB", "WebSockets", "Google Maps API"],
+      githubUrl: "https://github.com/rhey-ranido/service-hub",
+      liveUrl: "https://capstonev1.vercel.app",
+      image: "./assets/project3.png"
+    }
+  ],
 
+  // Navigation
+  navigation: [
+    { name: "Home", href: "#home" },
+    { name: "Projects", href: "#projects" },
+    { name: "About", href: "#about" }
+  ]
+};
+
+// Export for use in main.js
+if (typeof module !== 'undefined' && module.exports) {
+  module.exports = portfolioConfig;
 }

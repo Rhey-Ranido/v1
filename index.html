@@ -1,63 +1,163 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Jerson Caibog</title>
-  <link rel="stylesheet" href="index.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Christian Rhey Ranido - Aspiring Software Engineer</title>
+    <meta name="description" content="Aspiring Software Engineer pursuing Information Technology at Eastern Samar State University. Specializing in full-stack development with React, Vue.js, and modern web technologies.">
+    
+    <!-- Preconnect to external domains for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="./assets/favicon.ico">
 </head>
 <body>
-  <div class="content" >
-
-      <!-- Coc -->
-      <div class="cover-photo" >
-        <!-- Cover photo appended here -->
-      </div>
-
-      <div class="content__body">
-
-        <!-- Profile Picture -->
-        <div class="profile">
-          <!-- Profile appended here -->
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#home" class="nav-logo" id="nav-logo">
+                <span class="logo-text" id="logo-container">RR</span>
+                <span class="nav-name">Rhey Ranido</span>
+            </a>
+            
+            <ul class="nav-menu" id="nav-menu">
+                <!-- Navigation items will be populated by JavaScript -->
+            </ul>
+            
+            <div class="nav-controls">
+                <!-- Theme toggle button -->
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark/light mode">
+                    <span class="theme-icon sun-icon">☀️</span>
+                    <span class="theme-icon moon-icon">🌙</span>
+                </button>
+                
+                <!-- Mobile menu toggle -->
+                <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Toggle mobile menu">
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                </button>
+            </div>
         </div>
+    </nav>
 
-        <!-- Profile Info -->
-        <div class="info" >
-          <div class="info__identity">
-            <span class="info__name text--name">
-              <!-- name -->
-            </span>
-            <span class="info__education text--large">
-              <!-- education -->
-            </span>
-          </div>
-          <div class="info__socials">
-            <!-- Socials are appended here -->
-          </div>
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero-section">
+            <div class="container">
+                <div class="hero-content">
+                    <div class="hero-visual" data-aos="fade-right">
+                        <div class="hero-avatar">
+                            <div class="avatar-placeholder" id="hero-avatar">
+                                <span class="avatar-initials" id="avatar-initials">AJ</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hero-text" data-aos="fade-up">
+                        <h1 class="hero-title">
+                            <span class="greeting">Hi, I'm</span>
+                            <span class="name" id="developer-name">Alex Johnson</span>
+                        </h1>
+                        <h2 class="hero-subtitle" id="developer-title">Full Stack Web Developer</h2>
+                        <p class="hero-description" id="developer-tagline">
+                            Crafting digital experiences with clean code and creative solutions
+                        </p>
+                        <div class="hero-actions">
+                            <a href="#projects" class="btn btn-primary">View My Work</a>
+                            <a href="#about" class="btn btn-secondary">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Scroll indicator -->
+                <div class="scroll-indicator" data-aos="fade-up" data-aos-delay="1000">
+                    <span class="scroll-text">Scroll to explore</span>
+                    <div class="scroll-arrow"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="projects-section">
+            <div class="container">
+                <header class="section-header" data-aos="fade-up">
+                    <h2 class="section-title">Featured Projects</h2>
+                    <p class="section-description">
+                        Here are some of my recent projects that showcase my skills and passion for development.
+                    </p>
+                </header>
+                
+                <div class="projects-grid" id="projects-grid">
+                    <!-- Projects will be populated by JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about-section">
+            <div class="container">
+                <div class="about-content">
+                    <div class="about-text" data-aos="fade-right">
+                        <header class="section-header">
+                            <h2 class="section-title">About Me</h2>
+                        </header>
+                        <div class="about-bio" id="about-bio">
+                            <!-- Bio will be populated by JavaScript -->
+                        </div>
+                        
+                        <div class="about-details">
+                            <div class="detail-item">
+                                <span class="detail-label">Location</span>
+                                <span class="detail-value" id="developer-location">San Francisco, CA</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-label">Email</span>
+                                <a href="mailto:" class="detail-value detail-link" id="developer-email">alex.johnson@email.com</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="about-skills" data-aos="fade-left">
+                        <h3 class="skills-title">Technologies & Tools</h3>
+                        <div class="skills-grid" id="skills-grid">
+                            <!-- Skills will be populated by JavaScript -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-left">
+                    <p class="footer-copyright">
+                        © 2025 <span id="footer-name">Alex Johnson</span>
+                    </p>
+                </div>
+                <div class="footer-right">
+                    <div class="footer-social" id="footer-social">
+                        <!-- Social icons will be populated by JavaScript -->
+                    </div>
+                </div>
+            </div>
         </div>
+    </footer>
 
-        <!-- Projects -->
-        <div class="projects">
-          <span class="projects__header text--header">projects</span>
-          <div class="projects__content">
-            <!-- Projects are appended here -->
-          </div>
-        </div>
-      </div>
-
-      <!-- Contact -->
-      <div class="contact">
-        <span class="contact__header text--header">contact</span>
-        <div class="contact__content">
-          <span class="email">jersoncaibog1@gmail.com</span>
-          <span class="phone">+639273240956</span>
-        </div>
-      </div>
-
-      <!-- Footer -->
-      <span class="text--small" >© Jerson Caibog 2025</span>
-  </div>
-
-  <script src="index.js" type="module" ></script>
+    <!-- JavaScript -->
+    <script src="config.js"></script>
+    <script src="main.js"></script>
 </body>
 </html>

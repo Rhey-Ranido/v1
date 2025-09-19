@@ -1,0 +1,21 @@
+# Assets Directory
+
+This directory contains static assets for the portfolio:
+
+## Images
+- `avatar.jpg` - Profile photo (optional)
+- `project1.jpg` - Project screenshot 1
+- `project2.jpg` - Project screenshot 2  
+- `project3.jpg` - Project screenshot 3
+- `favicon.ico` - Website favicon
+
+## Icons
+- `icons/github.svg` - GitHub social icon
+- `icons/linkedin.svg` - LinkedIn social icon  
+- `icons/gmail.svg` - Gmail/Email social icon
+- `icons/home-logo.svg` - Custom home logo with RR initials (detailed version)
+- `icons/home-logo-minimal.svg` - Custom home logo with RR initials (minimal version - currently used)
+
+The SVG icons are automatically loaded by the JavaScript and will fallback to emoji if the files can't be loaded.
+
+Add your own images to replace the placeholders referenced in config.js.
