@@ -947,14 +947,6 @@ code {
     gap: var(--spacing-2xl);
   }
   
-  /* Ensure hero image sits below the text on mobile */
-  .hero-text {
-    order: 1;
-  }
-  .hero-visual {
-    order: 2;
-  }
-  
   .hero-actions {
     justify-content: center;
   }
