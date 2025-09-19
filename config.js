@@ -84,6 +84,9 @@ const portfolioConfig = {
 // Make portfolioConfig available globally for browser use
 window.portfolioConfig = portfolioConfig;
 
+// Debug: Log that config is loaded
+console.log('✅ Config loaded successfully:', portfolioConfig);
+
 // Export for use in main.js (Node.js compatibility)
 if (typeof module !== 'undefined' && module.exports) {
   module.exports = portfolioConfig;

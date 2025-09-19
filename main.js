@@ -175,11 +175,12 @@ function initializeNavigation() {
  * Populate navigation menu from config
  */
 function populateNavigation() {
-  if (!elements.navMenu || !portfolioConfig.navigation) return;
+  const config = portfolioConfig || window.portfolioConfig;
+  if (!elements.navMenu || !config || !config.navigation) return;
   
   elements.navMenu.innerHTML = '';
   
-  portfolioConfig.navigation.forEach(item => {
+  config.navigation.forEach(item => {
     const li = document.createElement('li');
     const a = document.createElement('a');
     
@@ -310,8 +311,31 @@ function populateContent() {
  * Populate personal information
  */
 function populatePersonalInfo() {
-  const { personal } = portfolioConfig;
+  // Debug: Check if portfolioConfig is available
+  if (typeof portfolioConfig === 'undefined') {
+    console.error('❌ portfolioConfig is not defined!');
+    console.log('Available on window:', typeof window.portfolioConfig);
+    
+    // Try to use window.portfolioConfig as fallback
+    if (typeof window.portfolioConfig !== 'undefined') {
+      console.log('✅ Using window.portfolioConfig as fallback');
+      const { personal } = window.portfolioConfig;
+      populatePersonalInfoFromConfig(personal);
+      return;
+    } else {
+      console.error('❌ Neither portfolioConfig nor window.portfolioConfig is available!');
+      return;
+    }
+  }
   
+  const { personal } = portfolioConfig;
+  populatePersonalInfoFromConfig(personal);
+}
+
+/**
+ * Helper function to populate personal info from config
+ */
+function populatePersonalInfoFromConfig(personal) {
   if (elements.developerName) elements.developerName.textContent = personal.name;
   if (elements.developerTitle) elements.developerTitle.textContent = personal.title;
   if (elements.developerTagline) elements.developerTagline.textContent = personal.tagline;
@@ -363,11 +387,12 @@ function populatePersonalInfo() {
  * Populate projects grid
  */
 function populateProjects() {
-  if (!elements.projectsGrid || !portfolioConfig.projects) return;
+  const config = portfolioConfig || window.portfolioConfig;
+  if (!elements.projectsGrid || !config || !config.projects) return;
   
   elements.projectsGrid.innerHTML = '';
   
-  portfolioConfig.projects.forEach((project, index) => {
+  config.projects.forEach((project, index) => {
     const projectCard = createProjectCard(project, index);
     elements.projectsGrid.appendChild(projectCard);
   });
@@ -415,11 +440,12 @@ function createProjectCard(project, index) {
  * Populate skills grid
  */
 function populateSkills() {
-  if (!elements.skillsGrid || !portfolioConfig.skills) return;
+  const config = portfolioConfig || window.portfolioConfig;
+  if (!elements.skillsGrid || !config || !config.skills) return;
   
   elements.skillsGrid.innerHTML = '';
   
-  portfolioConfig.skills.forEach((skill, index) => {
+  config.skills.forEach((skill, index) => {
     const skillItem = document.createElement('div');
     skillItem.className = 'skill-item';
     skillItem.textContent = skill;
@@ -433,7 +459,8 @@ function populateSkills() {
  * Populate footer social links
  */
 function populateFooterSocial() {
-  if (!elements.footerSocial || !portfolioConfig.social) return;
+  const config = portfolioConfig || window.portfolioConfig;
+  if (!elements.footerSocial || !config || !config.social) return;
   
   elements.footerSocial.innerHTML = '';
   
@@ -443,7 +470,7 @@ function populateFooterSocial() {
     gmail: 'Email'
   };
   
-  Object.entries(portfolioConfig.social).forEach(([platform, url]) => {
+  Object.entries(config.social).forEach(([platform, url]) => {
     if (url) {
       const link = document.createElement('a');
       link.href = url;
